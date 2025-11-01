@@ -39,6 +39,9 @@ Skipped TypeScript to prototype faster (probably should've used it). No server-s
 ### Trade History & Metrics
 ![Dashboard Screenshot 3](./screenshot_3.png)
 
+### Backend Logging
+![Dashboard Screenshot 4](./screenshot_4.png)
+
 ## Inspiration
 
 ![Inspiration](./Inspiration.webp)
