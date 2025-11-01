@@ -2,6 +2,49 @@
 
 A full-stack web application for analyzing trading performance with real-time metrics, charts, and trade history.
 
+## Technical Decisions
+
+**Stack Choice**
+
+Went with a standard React + Express setup. React makes building component-based dashboards straightforward, and keeping the frontend/backend separate means I can deploy them independently. Stayed in the JavaScript ecosystem throughout to avoid context switching.
+
+**State Management**
+
+Used Redux Toolkit even though it might be overkill. The analytics data flows through multiple components (charts, tables, cards), and Redux prevents prop drilling hell. The `createAsyncThunk` helper makes handling loading states and errors cleaner.
+
+**Build & Development**
+
+Vite over Create React App for faster builds and instant HMR. Running both servers separately during development makes debugging easier. Nodemon auto-restarts the backend, Vite handles frontend updates.
+
+**UI & Styling**
+
+Recharts for data visualization—it's declarative and works well with React. Less flexible than D3, but good enough for standard financial charts. Tailwind CSS for styling because utility classes are fast to work with, and the built-in design system keeps things consistent.
+
+**Data & Logging**
+
+Using mock data instead of a real database to move faster. The calculation functions are pure, so swapping in a database later is just changing the data source. Winston for structured logging on the backend to track performance and errors.
+
+**Trade-offs**
+
+Skipped TypeScript to prototype faster (probably should've used it). No server-side rendering since this is a dashboard, not a content site. No tests yet, which I'll regret later. API only has one endpoint right now—would split it up as the app grows.
+
+## Screenshots
+
+### Home Page
+![Dashboard Screenshot 1](./screenshot_1.png)
+
+### Dashboard UI
+![Dashboard Screenshot 2](./screenshot_2.png)
+
+### Trade History & Metrics
+![Dashboard Screenshot 3](./screenshot_3.png)
+
+## Inspiration
+
+![Inspiration](./Inspiration.webp)
+
+This project was inspired by professional trading platforms and the need for comprehensive trading analytics tools. The goal was to create an intuitive, data-driven dashboard that helps traders track performance, visualize trends, and make informed decisions based on historical data.
+
 ## Tech Stack
 
 ### Frontend
