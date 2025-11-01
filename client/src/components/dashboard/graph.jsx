@@ -15,7 +15,7 @@ const AreaChartFillByValue = ({
   height = 300,
   positiveColor = "green",
   negativeColor = "red",
-  strokeColor = "#000",
+  strokeColor = "#555555",
   showGrid = true,
   showTooltip = true,
 }) => {
@@ -72,15 +72,15 @@ const AreaChartFillByValue = ({
         bottom: 0,
       }}
     >
-      {showGrid && <CartesianGrid strokeDasharray="3 3" />}
+      {showGrid && <CartesianGrid strokeDasharray="1 1" />}
       <XAxis
         dataKey={xAxisKey}
         interval="preserveStartEnd"
-        tick={{ fontSize: 12 }}
+        tick={{ fontSize: 10 }}
       />
       <YAxis
         width="auto"
-        tick={{ fontSize: 12 }}
+        tick={{ fontSize: 10 }}
         tickFormatter={(value) => `$${value.toLocaleString()}`}
       />
       {showTooltip && <Tooltip />}

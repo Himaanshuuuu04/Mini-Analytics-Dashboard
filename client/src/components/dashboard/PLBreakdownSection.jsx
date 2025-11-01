@@ -10,7 +10,7 @@ export default function PLBreakdownSection({
       <h3 className="text-base font-semibold text-gray-800 mb-3">
         P/L Breakdown
       </h3>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col  gap-3">
         <PLSummaryCard
           label="Total P/L (Currency)"
           value={`$${plCurrency.toLocaleString("en-US", {
